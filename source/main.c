@@ -12,12 +12,12 @@ int main(int argc, char **argv) {
     consoleInit(GFX_TOP, NULL);
     printf("MCU info\nby Hikari\n\n");
     printf("Press B to exit.\n");
-	  printf("Initializing the MCU...\n");
-		mcuInit();
+    printf("Initializing the MCU...\n");
+    mcuInit();
     GetMcuFwVerHigh(&mcuFWHigh);
     printf("McuFwVerHigh: %u\n", mcuFWHigh);
     GetMcuFwVerLow(&mcuFWLow);
-		printf("McuFwVerLow: %u\n", mcuFWLow);
+    printf("McuFwVerLow: %u\n", mcuFWLow);
       while (aptMainLoop()) {
         hidScanInput();
         u32 kDown = hidKeysDown();
@@ -28,9 +28,9 @@ int main(int argc, char **argv) {
         }
 
     mcuExit();
-		gfxFlushBuffers();
-		gfxSwapBuffers();
-		gspWaitForVBlank();
+    gfxFlushBuffers();
+    gfxSwapBuffers();
+    gspWaitForVBlank();
 
     gfxExit();
     return 0;

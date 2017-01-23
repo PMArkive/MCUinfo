@@ -9,19 +9,19 @@ Result mcuExit() {
 	}
 
 Result GetMcuFwVerHigh(u8* out) {
-      u32* ipc = getThreadCommandBuffer();
-      ipc[0] = 0x100000;
-      Result ret = svcSendSyncRequest(mcuHandle);
-      if(ret < 0) return ret;
-  	   *out = ipc[2];
-      return ipc[1];
+    u32* ipc = getThreadCommandBuffer();
+    ipc[0] = 0x100000;
+    Result ret = svcSendSyncRequest(mcuHandle);
+    if(ret < 0) return ret;
+  	  *out = ipc[2];
+    return ipc[1];
   }
 
 Result GetMcuFwVerLow(u8* out) {
-      u32* ipc = getThreadCommandBuffer();
-      ipc[0] = 0x110000;
-      Result ret = svcSendSyncRequest(mcuHandle);
-      if(ret < 0) return ret;
-    	 *out = ipc[2];
-      return ipc[1];
-    }
+    u32* ipc = getThreadCommandBuffer();
+    ipc[0] = 0x110000;
+    Result ret = svcSendSyncRequest(mcuHandle);
+    if(ret < 0) return ret;
+    	*out = ipc[2];
+    return ipc[1];
+  }
