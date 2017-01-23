@@ -4,4 +4,4 @@
 
 ## Compilation
 
-Requires ctrulib, makerom, and bannertool. Running "make" will generate an installable CIA as well as a .3dsx and .smdh for the HBL (requires mcu::HWC access!).
+Requires ctrulib, makerom, and bannertool. Running "make" will generate an installable CIA as well as a .3dsx for the HBL (requires mcu::HWC access!).
