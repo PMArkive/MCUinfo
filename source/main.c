@@ -19,6 +19,7 @@ int main(int argc, char **argv) {
 	GetMcuFwVerLow(&mcuFWLow);
 	printf("McuFwVerLow: %u\n", mcuFWLow);
 	while (aptMainLoop()) {
+		gspWaitForVBlank();
 		hidScanInput();
 		u32 kDown = hidKeysDown();
 		if (kDown & KEY_B) {
