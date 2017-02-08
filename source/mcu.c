@@ -13,7 +13,7 @@ Result GetMcuFwVerHigh(u8* out) {
 	ipc[0] = 0x100000;
 	Result ret = svcSendSyncRequest(mcuHandle);
 	if(ret < 0) return ret;
-		*out = ipc[2];
+		*out = ipc[2] - 0x10;
 	return ipc[1];
 }
 

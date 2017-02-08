@@ -15,9 +15,8 @@ int main(int argc, char **argv) {
 	printf("Initializing the MCU...\n");
 	mcuInit();
 	GetMcuFwVerHigh(&mcuFWHigh);
-	printf("McuFwVerHigh: %u\n", mcuFWHigh);
 	GetMcuFwVerLow(&mcuFWLow);
-	printf("McuFwVerLow: %u\n", mcuFWLow);
+	printf("MCU firmware version: %u.%u\n", mcuFWHigh, mcuFWLow);
 	while (aptMainLoop()) {
 		gspWaitForVBlank();
 		hidScanInput();
