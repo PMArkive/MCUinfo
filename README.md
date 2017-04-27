@@ -1,4 +1,4 @@
-#MCUinfo
+# MCUinfo
 
 .CIA/.3dsx app that uses mcu::HWC to display MCU version info.
 
